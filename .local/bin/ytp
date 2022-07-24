@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+
+from os.path import isdir
+import subprocess
+import argparse
+import os
+
+parser = argparse.ArgumentParser(description="Downloads entire youtube library to mp3.")
+parser.add_argument("-p", metavar="PLAYLIST", help="playlist link.", required=True)
+parser.add_argument("-o", metavar="OUTPUT", help="output folder", required=True)
+args = parser.parse_args()
+
+output_folder = os.path.abspath(args.o)
+
+if not os.path.isdir(output_folder):
+    print("output path is not a folder")
+    exit()
+
+cmd = ["yt-dlp", "--extract-audio", "--audio-format", "mp3", "-o", "%(playlist)s/%(title)s - %(channel)s.%(ext)s", "-P", output_folder, args.p]
+
+subprocess.run(cmd)
+
+

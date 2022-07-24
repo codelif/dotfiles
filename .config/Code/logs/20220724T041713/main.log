@@ -1,0 +1,4 @@
+[2022-07-24 04:17:13.584] [main] [info] update#setState idle
+[2022-07-24 04:17:14.786] [main] [info] Starting extension host with pid 141901 (fork() took 64 ms).
+[2022-07-24 04:17:15.874] [main] [info] Waiting for extension host with pid 141901 to exit.
+[2022-07-24 04:17:15.907] [main] [info] Extension host with pid 141901 exited with code: 0, signal: null.

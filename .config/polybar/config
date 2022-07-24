@@ -1,0 +1,141 @@
+[bar/mybar]
+monitor = HDMI-1
+override-redirect = true
+
+bottom = true
+fixed-center = true
+
+width = 95%
+height = 52
+
+offset-x = 2.5%
+offset-y = 13
+
+background = #50010101
+foreground = #000
+
+line-size = 0
+line-color = #fff
+
+padding-right = 3
+
+font-0 = IBM Plex Mono:medium:size=9;3
+font-1 = FontAwesome5Free:style=Solid:size=10;3
+font-2 = unifont:size=10;3
+
+; Modules are added to one of the available blocks
+;   modules-left = cpu ram
+;   modules-center = xwindow xbacklight
+;   modules-right = ipc clock
+modules-left = i3
+modules-center = 
+modules-right = github sep memory sep cpu sep date
+
+spacing = 0
+dim-value = 1.0
+
+wm-name = i3
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${root.background}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+wm-restack = i3
+
+dpi-x = 135
+dpi-y = 135
+
+enable-ipc = false
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+
+strip-wsnumbers = true
+
+index-sort = true
+
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+label-unfocused-foreground = #ffffff
+
+label-focused = %index%
+label-focused-foreground = #fff
+label-focused-background = #50505354
+label-focused-underline = #f92672
+label-focused-padding = 2
+
+
+;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;DATE;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
+[module/date]
+type = internal/date
+
+interval = 1.0
+date = %Y-%m-%d%
+
+time = %H:%M
+
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+label = %date% %time%
+label-font = 0
+label-foreground = #D8DEE9
+
+
+[module/cpu]
+type = internal/cpu
+
+interval = 1
+
+label =  %percentage:2%%
+label-foreground = #0066cc
+
+
+[module/memory]
+type = internal/memory
+
+interval = 1
+format = <label>
+
+label =  %gb_used%
+label-foreground = #f92672
+
+[module/github]
+type = internal/github
+
+token = ${file:/home/harsh/.config/polybar/github.token}
+user = codelif
+empty-notifications = true
+interval = 10
+
+format = <label>
+label =  %notifications%
+label-foreground = #0066cc
+
+format-offline = <label-offline>
+label-offline = Offline
+
+[module/decor-glyph]
+type = custom/text
+content-foreground = #465457
+margin = 0
+
+[module/sep]
+inherit = module/decor-glyph
+content = "   "

@@ -1,0 +1,13 @@
+[2022-07-24 20:45:11.795] [exthost] [info] Extension host with pid 767 started
+[2022-07-24 20:45:11.842] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2022-07-24 20:45:12.377] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-07-24 20:45:12.489] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-07-24 20:45:12.606] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-07-24 20:45:13.006] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-07-24 20:45:13.213] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-07-24 20:45:13.658] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2022-07-24 20:45:14.693] [exthost] [info] Eager extensions activated
+[2022-07-24 20:45:14.723] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-07-24 20:45:14.774] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-07-24 20:45:20.947] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-07-24 20:45:20.955] [exthost] [info] Extension host with pid 767 exiting with code 0
